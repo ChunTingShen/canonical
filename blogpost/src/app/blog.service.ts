@@ -10,8 +10,7 @@ export class BlogService {
   private readonly url = "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json";
 
 
-  getPost(){
-    console.log(this.url)
+  getPost(): any{
     return this.httpClient.get(this.url);
   }
 }
@@ -50,7 +49,9 @@ export interface Post {
   _end_day: string;
   _end_month: string;
   _end_year: string;
+  _embedded: Embedded;
   about: About;
+  featured_media: string;
   // author: Author;
 
 }
@@ -64,7 +65,14 @@ export interface About{
 
 }
 
+export interface Embedded {
+  author: Author[];  
+}
+
 export interface Author {
-  embeddable: string;
-  href: string
+  id: number;
+  name: string;
+  slug: string;
+  url: string;
+  link: string;
 }

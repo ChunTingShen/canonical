@@ -1,3 +1,27 @@
-Hello world!
 
-<div>{{title}}</div>
+<div class="container">
+  <mat-card class="banner" *ngFor="let item of posts">
+    <mat-card-header>
+    CLOUD AND SERVER    
+    </mat-card-header>
+    <hr>
+    
+    <mat-card-content>
+      <a href={{item.link}}>
+        <img mat-card-image src={{item.featured_media}} alt="featured_media">
+        <h3>{{item.title.rendered}}</h3>
+      </a>
+  
+      <div>
+        <i>
+          By <a href={{item._embedded.author[0].link}}>{{item._embedded.author[0].name}}</a> 
+          on {{item.date | date: 'd MMMM  y'}}
+        </i>
+      </div>
+    </mat-card-content>
+    
+    <hr>
+    <mat-card-footer>Article</mat-card-footer>
+  </mat-card>
+</div>
+
