@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
 
   getData() {
     this.blogService.getPost().subscribe((res:any)=>{
-      console.log(res)
+      // console.log(res)
       this.posts = res
     })
 
