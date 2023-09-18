@@ -1,5 +1,6 @@
 # Blogpost
 
+This project is created for the coding test of Canonical interview. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server
