@@ -29,30 +29,12 @@ export interface Post {
   title: Rendered;
   content: Rendered;
   excerpt: Rendered;
-  author: number;
-  comment_status: string;
-  ping_status: string;
-  sticky: string;
-  template: string;
   format: string;
   meta: string[];
-  categories: number[];
-  tags: number[];
-  topic: number[];
-  group: number[];
-  _event_location: string;
-  _event_venue: string;
-  _event_registration: string;
-  _start_day: string;
-  _start_month: string;
-  _start_year: string;
-  _end_day: string;
-  _end_month: string;
-  _end_year: string;
   _embedded: Embedded;
   about: About;
   featured_media: string;
-  // author: Author;
+  author: Author;
 
 }
 
